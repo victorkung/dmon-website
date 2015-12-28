@@ -1,0 +1,100 @@
+// *** IMPORTING STYLES ***
+
+// Normalize Styles
+@import 'node_modules/normalize.css/normalize';
+
+// Bootstrap Grid/Layout and Utilities CSS
+@import '../_styles/bootstrap';
+
+// Import Utilities (Variables & Mixins)
+@import '../_styles/utilities';
+
+// Font
+// - import fonts here
+
+// Mignific Popup
+@import '../_styles/magnific-popup';
+
+// Import Slick JS
+$slick-font-path: '../../fonts/';
+$slick-loader-path: '../images/';
+@import 'node_modules/slick-carousel/slick/slick.scss';
+@import 'node_modules/slick-carousel/slick/slick-theme.scss';
+
+
+// *** IMPORTING MODULES ***
+// @import '../_modules/header/header';
+// @import '../_modules/footer/footer';
+// @import '../_modules/banner/banner';
+// @import '../_modules/button/button';
+
+
+
+// *** GLOBAL STYLES ***
+
+html, body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  // font-family: 'Lato', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  font-size: 16px;
+  // Therefore 1 em = 16px
+}
+
+// @media screen and (min-width: 768px) {
+//   body {
+//     font-size: 18px;
+//   }
+// }
+
+// @media screen and (min-width: 992px) {
+//   body {
+//     font-size: 16px;
+//   }
+// }
+
+// @media screen and (min-width: 1200px) {
+//   body {
+//     font-size: 20px;
+//   }
+// }
+
+
+h1, h2, h3, h4, h5, h6, p, a {
+  -webkit-backface-visibility: hidden;  
+  // prevents the button hover opacity from effecting other elements
+}
+
+// h1 { font-size: 2.7em; line-height: 1.1em; }
+// h2 { font-size: 2.4em; line-height: 1.2em; }
+// h3 { font-size: 2em; line-height: 1.3em; }
+// h4 { font-size: 1.6666666667em; }
+// h5 { font-size: 1.2em; }
+
+
+a, button, input[type="submit"] {
+  transition: all 0.5s ease;
+}
+
+a {
+  color: black;
+  &:hover {
+    opacity: 0.7;
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+
+
+// Box sizing partial styles:
+// Apply a natural box layout model to all elements
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
