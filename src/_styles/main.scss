@@ -16,15 +16,15 @@
 @import '../_styles/magnific-popup';
 
 // Import Slick JS
-$slick-font-path: '../../fonts/';
-$slick-loader-path: '../images/';
-@import 'node_modules/slick-carousel/slick/slick.scss';
-@import 'node_modules/slick-carousel/slick/slick-theme.scss';
+// $slick-font-path: '../../fonts/';
+// $slick-loader-path: '../images/';
+// @import 'node_modules/slick-carousel/slick/slick.scss';
+// @import 'node_modules/slick-carousel/slick/slick-theme.scss';
 
 
 // *** IMPORTING MODULES ***
-// @import '../_modules/header/header';
-// @import '../_modules/footer/footer';
+@import '../_modules/header/header';
+@import '../_modules/footer/footer';
 // @import '../_modules/banner/banner';
 // @import '../_modules/button/button';
 
@@ -39,9 +39,21 @@ html, body {
   // font-family: 'Lato', 'Helvetica Neue', sans-serif;
 }
 
+.body-container {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-size: 16px;
   // Therefore 1 em = 16px
+}
+
+main {
+  position: relative;
+  top: 65px;
 }
 
 // @media screen and (min-width: 768px) {

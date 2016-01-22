@@ -47,6 +47,13 @@ $md: 1200px;  // laptop and above
   position: absolute;
 }
 
+@mixin fixed-pos ($top: auto, $right: auto, $bottom: auto, $left: auto) {
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  position: fixed;
+}
 
 // Utility Classes (not defined in Bootstrap)
 .text-left { text-align: left; }
