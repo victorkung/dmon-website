@@ -23,11 +23,12 @@
 // @import 'node_modules/slick-carousel/slick/slick-theme.scss';
 
 
+
+
 // *** IMPORTING MODULES ***
 @import '../_modules/header/header';
 @import '../_modules/footer/footer';
-// @import '../_modules/banner/banner';
-// @import '../_modules/button/button';
+
 
 
 
@@ -88,38 +89,14 @@ h1, h2, h3, h4, h5, h6, p, a {
 
 
 a, button  {
-  transition: all 0.5s ease;
+  @include transition(all 0.5s ease);
 }
 
 a {
   text-decoration: none;
   &:hover {
-    opacity: 0.7;
+    text-decoration: none;
+    cursor: pointer;
   }
 }
 
-
-
-// *** UTILITY CLASSES ***
-
-// Clearfix
-.group:before, .group:after { 
-  content: "";
-  display: table; 
-}
-.group:after {
-  clear: both; 
-}
-.group {
-  zoom: 1; /* IE6&7 */ 
-}
-
-// Box sizing partial styles:
-// Apply a natural box layout model to all elements
-*,
-*:before,
-*:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}

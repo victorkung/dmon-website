@@ -4,6 +4,11 @@ $sm: 992px;  // tablet
 $md: 1200px;  // laptop and above
 
 
+// Variables
+$dark-blue: #0a1e32;
+$light-blue: #368ad9;
+
+
 // Mixins 
 @mixin vertical-align($position: relative, $translateY: -50%) {
   position: $position;
@@ -55,7 +60,33 @@ $md: 1200px;  // laptop and above
   position: fixed;
 }
 
+
+
 // Utility Classes (not defined in Bootstrap)
 .text-left { text-align: left; }
 .text-right { text-align: right; }
 .text-center {text-align: center; }
+.border-underline { border-bottom: 1px solid white;  }
+
+
+// Clearfix
+.group:before, .group:after { 
+  content: "";
+  display: table; 
+}
+.group:after {
+  clear: both; 
+}
+.group {
+  zoom: 1; /* IE6&7 */ 
+}
+
+// Box sizing partial styles:
+// Apply a natural box layout model to all elements
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}

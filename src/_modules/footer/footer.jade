@@ -4,14 +4,38 @@ mixin footer(spec)
 
   footer
     .container
-      .row
-      .col-xs-12.col-sm-4
-        a Footer Link 
-      .col-xs-12.col-sm-4
-        a Footer Link 
-      .col-xs-12.col-sm-4
-        a Footer Link 
+      nav.row
+        .col-xs-12.col-sm-10
+          ul
+            li
+              a(href=baseUrl + "trading-experience/") Trading Experience
+            li
+              a(href=baseUrl + "hyde-park-angels/") Hyde Park Angels
+            li
+              a(href=baseUrl + "board-experience") Board Experience
+            li
+              a(href=baseUrl + "alternative-finance") Alternative Finance
+            li
+              a(href=baseUrl + "contact/" class="contact-btn") Contact
 
-      .row.copyright
+        .col-xs-12.col-sm-2
+          ul.social-media-icons
+            li
+              a(href=baseUrl + "trading-experience/") 
+                img(src=baseUrl + "images/footer/twitter-icon.png")
+            li
+              a(href=baseUrl + "hyde-park-angels/")
+                img(src=baseUrl + "images/footer/linkedin-icon.png")
+
+
+      .row.disclaimer
         .col-xs-12
-          p &copy; 2016 Victor Kungw
+          p.
+            CME Group Inc. has filed a definitive proxy statement with the Securities and Exchange Commission ("SEC") regarding the Annual Meeting of Shareholders to be held on May 18, 2016. Shareholders of CME Group Inc. are urged to read the definitive proxy statement and any other relevant materials filed by CME Group Inc. with the SEC because they contain, or will contain, important information about CME Group Inc. and the Annual Meeting. The definitive proxy statement and other relevant materials (when they become available), and any other documents filed by CME Group Inc. with the SEC, may be obtained free of charge at the SEC's web site at www.sec.gov. In addition, shareholders may obtain free copies of these documents by contacting CME Group Inc., Shareholder Relations and Membership Services, 20 South Wacker Drive, Chicago, Illinois 60606. Shareholders are urged to read the definitive proxy statement and the other relevant materials (when they become available) before making any voting decision with respect to matters to be acted on at the Annual Meeting.
+
+          p.
+            The preceding material was prepared and distributed solely by the candidate. The views and opinions expressed therein are solely those of the candidate and do not necessarily reflect the views or opinions of CME Group Inc. or its directors, officers or employees, nor have these views or opinions been approved or sanctioned by any of them.
+
+      .row.breadcrumb
+        .col-xs-12 
+          a(href="http://www.tandemdesigns.co" target="_blank") Created by <span class="border-underline">Tandem Designs</span>

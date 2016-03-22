@@ -1,147 +1,118 @@
+@import 'utilities';
+
+
 // header styles
-header {
-  @include fixed-pos(auto, 0px, auto, 0px);
+header.main-navigation {
+  position: relative;
   height: 100px;
-  background: #ccc;
-  z-index: 100;
-  // padding: 15px 0 10px;
-  // box-shadow: 0px 0px 2px #888;
+  text-transform: uppercase;
 
-  .desktop-nav, .mobile-nav { text-align: right; }
+  .container {
+    height: 100%;
+  }
 
+  li {
+    list-style: none;
+  }
 
-  // Desktop Header
-  .desktop-nav {
-    padding: 0;
-    display: none;      
-
-    li {
-      display: inline;
-      padding: 0 15px;
-    }
-
-    // ul > li > a { font-size: 0.8em; }
+  a {
+    color: $dark-blue;
   }
 
   .logo {
-    padding: 10px 0;
-    width: 150px;
+    float: left;
+    font-family: 'Montserrat', 'PT Sans', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    letter-spacing: -2px;
+    @include vertical-align();
+  
+    a:hover {
+      opacity: 0.7;
+    }
   }
 
   
+  // Desktop Header
+  .desktop-nav {
+    display: none;
+    float: right;
+    font-family: 'PT Sans Narrow', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 5px;
+    @include vertical-align();
+
+    a:hover {
+      color: $light-blue;
+    }
+
+    li {
+      display: inline;
+      padding: 0 17.5px;
+    }
+
+    a.contact-btn {
+      color: #368ad9;
+      border: 2px solid #368ad9;
+      font-size: 16px;
+      font-family: 'PT Sans Caption', Arial, sans-serif;
+      padding: 17.5px;
+      border-radius: 10px;
+    }
+
+  }
+
+
   // Mobile Navigation & Overlay
   .mobile-nav {
-    .mobile-nav-icon {
-      position: relative;
-      top: 10px;
-    }
+      display: block;
+      float: right;
+      @include vertical-align();
   }
 
   .mobile-nav-popup {
     @include fixed-pos(0px, 0px, 0px, 0px);
-    // overflow: auto;
+    font-family: 'PT Sans', Arial, sans-serif;
     display: none;
     margin: 0;
     padding-top: 150px;
     z-index: 150;
     list-style: none;
-    background: rgba(88, 167, 210, 0.95);
-
-    ul { list-style: none; }
-    li > ul { display: none; }
+    background: rgba(10, 30, 50, 0.95);
 
     #close-btn {
       position: fixed;
       @include fixed-pos(25px, 25px, auto, auto);
       color: white;
       font-size: 36px;
-      &:hover {cursor: pointer;}
     }
 
-    .mobile-nav-link {
+    li {
       padding: 7.5px 0;
       
       a {
         color: white;
         font-size: 28px;
-        
-        // Arrow Pointing Down
-        span { 
-          position: relative; 
-          top: -2px; 
-          padding-left: 2px; 
-          font-size: 8px; 
-          color: white; 
-        }
-      }
-
-      // Dropdown Menu for Mobile Navigation
-      ul {
-        margin-top: 5px;
-        li { padding: 5px 0; }
-        a { font-size: 22px; }
       }
     }
+
   }
+
 }
-
-.header-dropdown {
-  @include fixed-pos(auto, 0px, auto, 0px);
-  display: none;
-  top: 80px;
-  font-size: 16px;
-  padding: 35px 0;
-  z-index: 100;
-  background: rgba(88, 167, 210, 0.95);
-
-  a { 
-    color: white; 
-    &:hover {
-      opacity: 1;
-    }
-  }
   
-  img { 
-    display: block;
-    max-width: 100%;
-    width: 100px; 
-    margin-bottom: 15px;
-  }
 
-  .subnav-title {
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-
-  .subnav-subtitle {
-    display: block;
-    color: #eee;
-    padding-top: 5px;
-    margin-bottom: 0;
-    font-size: 14px;
-    font-weight: normal;
-  }
+// Fixed Header Styling - Non Homepage
+header.fixed {
+  @include fixed-pos(auto, 0px, auto, 0px);
+  z-index: 100;
+  background: white;
 }
 
-@media screen and (min-width: 450px) {
-  header {
-    .logo {
-      width: 225px;
-    }
-  }
-}
-
-
-// Make sure that the Desktop Dropdown never shows in mobile view
-@media screen and (max-width: 992px) {
-  .header-dropdown {
-    display: none !important;
-  }
-}
 
 // Make sure that the Desktop header shows up in Desktop view and the mobile header does not
 @media screen and (min-width: 992px) {
-  header {
+  header.main-navigation {
     .desktop-nav {
       display: block;
     }

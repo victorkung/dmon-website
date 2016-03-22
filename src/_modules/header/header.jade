@@ -1,167 +1,50 @@
 mixin header(spec)
   - spec = spec || {}
+  - spec.position = spec.position || ''
   - spec.__class = spec.__class || ''
 
-  header.row.clearfix
+
+  header.row.main-navigation(class="#{spec.position}")
     .container
       
       .logo
         a(href=baseUrl) Doug Monieson
 
-      nav.desktop-nav.col-xs-6.col-sm-9
+      nav.desktop-nav
         ul
           li
-            a(href="#")#how-it-works How It Works
+            a(href=baseUrl + "trading-experience/") Trading Experience
           li
-            a(href="#")#builder-resources Builder Resources
+            a(href=baseUrl + "hyde-park-angels/") Hyde Park Angels
           li
-            a(href=baseUrl + "#") Pricing
+            a(href=baseUrl + "board-experience") Board Experience
+          li
+            a(href=baseUrl + "alternative-finance") Alternative Finance
+          li
+            a(href=baseUrl + "contact/" class="contact-btn") Contact
 
-          li
-            a(href="#")#support Support
-          li
-            a(href="#" target="_blank") Blog
-          li
-            a(href="#")#store Store
-
-      nav.mobile-nav.col-xs-6.col-sm-9
-        a.mobile-nav-icon(href=baseUrl)
+      nav.mobile-nav
+        a(href=baseUrl)
           img(src=baseUrl + "images/header/menu-icon.png")
       
       ul.mobile-nav-popup.row
-        span#close-btn X
+        a#close-btn X
         .col-xs-offset-0.col-xs-12.col-sm-offset-2.col-sm-8
-          li.mobile-nav-link
-            a(href="#")#mobile-how-it-works How It Works 
-              span &#9660;
-            ul
-              li
-                a(href=baseUrl + '/') Product Features
-              li
-                a(href=baseUrl + '/') Wi-Fi Network
-              li
-                a(href=baseUrl + '') Apps & AirPlay®
+          li
+            a(href=baseUrl) Home
 
-          li.mobile-nav-link
-            a(href="#")#mobile-builder-resources Builder Resources 
-              span &#9660;
+          li
+            a(href=baseUrl + "trading-experience/") Trading Experience
 
-            //- ul
-            //-   li
-            //-     a(href=baseUrl + 'why-airhome/') Why Airhome?
-            //-   li
-            //-     a(href=baseUrl + 'demo-system/').
-            //-       Demo Systems & POP Displays
-            //-   li
-            //-     a(href=baseUrl + 'partner-programs/') Partner Program
+          li
+            a(href=baseUrl + "hyde-park-angels/") Hyde Park Angels
 
-          li.mobile-nav-link
-            a(href=baseUrl + "pricing/") Pricing
-          //- li.mobile-nav-link
-          //-   a(href="#") Design
-          li.mobile-nav-link
-            a(href="#")#mobile-support Support
-              span &#9660;
+          li
+            a(href=baseUrl + "board-experience") Board Experience
 
-            //- ul
-            //-   li
-            //-     a(href='http://airhome.zendesk.com' target="_blank") Support
-            //-   li
-            //-     //- Commenting this out for 12/11 launch 
-            //-     //- a(href=baseUrl + 'product-manuals/') Product Manuals
-            //-   li
-            //-     a(class="typeform-share link" href="https://airhome.typeform.com/to/PPwjef" data-mode="1" target="_blank").
-            //-       Contact Sales
+          li
+            a(href=baseUrl + "alternative-finance") Alternative Finance
 
-          li.mobile-nav-link
-            a(href="http://airhomehq.tumblr.com/" target="_blank") Blog
 
-          li.mobile-nav-link
-            a(href="#")#mobile-store Store
-              span &#9660;
-
-            //- ul
-            //-   li
-            //-     a(href='http://airhome.myshopify.com' target='_blank') Shopify US
-            //-   li
-            //-     a(href='http://airhomeca.myshopify.com' target='_blank') Shopify CAN
-
-  
-  //- DROPDOWN HEADER LIKE IN AIRHOME.IO WEBSITE
-
-  .header-dropdown.row#how-it-works-dropdown
-    .container
-      .col-xs-4
-        a(href=baseUrl + '')
-          img(src="http://pics.ebaystatic.com/aw/pics/express/icons/iconPlaceholder_96x96.gif")
-          //- img(src=baseUrl + 'images/header/icon_product_features.png')
-          span.subnav-title Product Features
-          span.subnav-subtitle Wired speakers, wireless control.
-
-      .col-xs-4
-        a(href=baseUrl + '')
-          img(src="http://pics.ebaystatic.com/aw/pics/express/icons/iconPlaceholder_96x96.gif")          
-          //- img(src=baseUrl + 'images/header/icon_wifi_network.png')
-          span.subnav-title Wi-Fi Network
-          span.subnav-subtitle Wi-Fi network setup info
-
-      .col-xs-4
-        a(href=baseUrl + '')
-          img(src="http://pics.ebaystatic.com/aw/pics/express/icons/iconPlaceholder_96x96.gif")
-          //- img(src=baseUrl + 'images/header/icons_apps_airplay.png')
-          span.subnav-title Apps & AirPlay®
-          span.subnav-subtitle Plays from your favourite apps
-
-  .header-dropdown.row#builder-resources-dropdown
-    .container
-      .col-xs-4
-        a(href=baseUrl + '') 
-          img(src="http://pics.ebaystatic.com/aw/pics/express/icons/iconPlaceholder_96x96.gif")
-          //- img(src=baseUrl + 'images/header/why_airhome_icon.png')
-          span.subnav-title Why Airhome?
-          span.subnav-subtitle Delight homes buyers with installed audio
-
-      .col-xs-4
-        a(href=baseUrl + '')
-          img(src="http://pics.ebaystatic.com/aw/pics/express/icons/iconPlaceholder_96x96.gif")
-          //- img(src=baseUrl + 'images/header/icon_product_features.png')
-          span.subnav-title Demo Systems & POP Displays
-          span.subnav-subtitle Sales tools to help you succeed
-
-      .col-xs-4
-        a(href=baseUrl + '')
-          img(src="http://pics.ebaystatic.com/aw/pics/express/icons/iconPlaceholder_96x96.gif")
-          //- img(src=baseUrl + 'images/header/partner_icon.png' style="width: 125px; margin-top: 21px;")
-          span.subnav-title Partner Program
-          span.subnav-subtitle Learn about the Partner Program
-
-  .header-dropdown.row#support-dropdown
-    .container
-      //- .col-xs-4
-      .col-xs-6
-        a(href='#' target='_blank') 
-          img(src="http://pics.ebaystatic.com/aw/pics/express/icons/iconPlaceholder_96x96.gif")
-          //- img(src=baseUrl + 'images/header/support_icon.png')
-          span.subnav-title Support
-          span.subnav-subtitle Visit the Airhome support center
-
-      .col-xs-6
-        a(class="typeform-share link" href="#" data-mode="1" target="_blank")
-          img(src="http://pics.ebaystatic.com/aw/pics/express/icons/iconPlaceholder_96x96.gif")
-          //- img(src=baseUrl + 'images/header/phone_support.png')
-          span.subnav-title Contact Sales
-          span.subnav-subtitle (780) 809-1089
-
-  .header-dropdown.row#store-dropdown
-    .container
-      .col-xs-6
-        a(href='#' target='_blank') 
-          img(src="http://pics.ebaystatic.com/aw/pics/express/icons/iconPlaceholder_96x96.gif")
-          //- img(src=baseUrl + 'images/header/store_icon.png')
-          span.subnav-title Shopify US
-
-      .col-xs-6
-        a(href='#' target='_blank')
-          img(src="http://pics.ebaystatic.com/aw/pics/express/icons/iconPlaceholder_96x96.gif")
-          //- img(src=baseUrl + 'images/header/store_icon.png')
-          span.subnav-title Shopify CAN
+          li
+            a(href=baseUrl + "contact/" class="contact-btn") Contact

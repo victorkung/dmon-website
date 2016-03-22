@@ -6,11 +6,14 @@ include _modules/footer/footer
 
 
 block content
-  +header()
+  +header({
+    //- position: 'fixed'
+  })
+
 
   .container
-    .col-xs-12
-      h1 Welcome to Yeogurt!
+    //- .col-xs-12
+      //- h1 Welcome to Yeogurt!
       //- p.
         Take a look at the
         #[+link({text: 'documentation'})(href='https://github.com/larsonjj/generator-yeogurt#yeogurt-generator---')]
