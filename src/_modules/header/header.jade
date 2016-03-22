@@ -2,12 +2,11 @@ mixin header(spec)
   - spec = spec || {}
   - spec.__class = spec.__class || ''
 
-  header.row
+  header.row.clearfix
     .container
-      .col-xs-6.col-sm-3
-        a(href=baseUrl)
-          img.logo(src="https://airhome.io/images/header/airhome-logo.png")
-          //- img.logo(src=baseUrl + "images/header/airhome-logo.png", width="225px")
+      
+      .logo
+        a(href=baseUrl) Doug Monieson
 
       nav.desktop-nav.col-xs-6.col-sm-9
         ul

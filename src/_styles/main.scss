@@ -9,8 +9,9 @@
 // Import Utilities (Variables & Mixins)
 @import '../_styles/utilities';
 
-// Font
-// - import fonts here
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Sans+Caption:400,700|PT+Sans+Narrow:400,700); /* PT Sans */
+@import url(https://fonts.googleapis.com/css?family=Merriweather:400,700,700italic|Montserrat:700); /* Merriweather & Montserra */
 
 // Mignific Popup
 @import '../_styles/magnific-popup';
@@ -30,31 +31,30 @@
 
 
 
-// *** GLOBAL STYLES ***
+// *** GLOBAL LAYOUT STYLES ***
 
 html, body {
   position: relative;
   width: 100%;
   height: 100%;
-  // font-family: 'Lato', 'Helvetica Neue', sans-serif;
+  // font-family: 'PT Sans', sans-serif;
+  font-family: 'Merriweather', Times, serif;
 }
 
 .body-container {
   width: 100%;
-  min-height: 100%;
-  margin: 0;
-  padding: 0;
+  max-width: 1366px;
+  margin: auto;
 }
+
+
+// *** TYPOGRAPHY STYLES ***
 
 body {
   font-size: 16px;
-  // Therefore 1 em = 16px
+  // Therefore 1 em = 16pxt
 }
 
-main {
-  position: relative;
-  top: 65px;
-}
 
 // @media screen and (min-width: 768px) {
 //   body {
@@ -87,19 +87,32 @@ h1, h2, h3, h4, h5, h6, p, a {
 // h5 { font-size: 1.2em; }
 
 
-a, button, input[type="submit"] {
+a, button  {
   transition: all 0.5s ease;
 }
 
 a {
-  color: black;
+  text-decoration: none;
   &:hover {
     opacity: 0.7;
-    cursor: pointer;
-    text-decoration: none;
   }
 }
 
+
+
+// *** UTILITY CLASSES ***
+
+// Clearfix
+.group:before, .group:after { 
+  content: "";
+  display: table; 
+}
+.group:after {
+  clear: both; 
+}
+.group {
+  zoom: 1; /* IE6&7 */ 
+}
 
 // Box sizing partial styles:
 // Apply a natural box layout model to all elements
