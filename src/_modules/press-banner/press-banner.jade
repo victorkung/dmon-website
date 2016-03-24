@@ -1,0 +1,25 @@
+mixin press-banner(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+
+  section.press-banner.row
+    .container.clearfix
+      p As seen in
+
+      ul.press-links
+        li
+          a(href="http://articles.chicagotribune.com/2000-05-27/business/0005270207_1_nasdaq-stocks-futures-contracts-stock-market" target="_blank")
+            img(src=baseUrl + "images/press-banner/chicago-tribune-logo-bw.png")
+        li
+          a(href="http://www.chicagobusiness.com/article/20140610/BLOGS11/140619999/oconnor-stepping-down-as-head-of-hyde-park-angels" target="_blank")
+            img(src=baseUrl + "images/press-banner/crains-logo-bw.png")
+        li
+          a(href="http://www.crowdfundinsider.com/2015/12/77733-crowdfunding-counselor-sam-guzik-a-voice-galvanizing-advocating-for-the-crowd/" target="_blank")
+            img(src=baseUrl + "images/press-banner/crowdfundinsider-logo-bw.png")
+        li
+          a(href="http://bluesky.chicagotribune.com/originals/chi-hyde-park-angels-karin-oconnor-steps-down-bsi,0,0.story" target="_blank")
+            img(src=baseUrl + "images/press-banner/blue-sky-logo-bw.png")
+        li
+          a(href="https://drive.google.com/file/d/0B0Y4GDBgkFHTQnQzMVc0RDdUODQ/view?usp=sharing" target="_blank")
+            img(src=baseUrl + "images/press-banner/fox-business-logo-bw.png")

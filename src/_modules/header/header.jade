@@ -1,50 +1,120 @@
+//- Include Modules
+include ../button/button
+
+
 mixin header(spec)
   - spec = spec || {}
-  - spec.position = spec.position || ''
+  - spec.home || spec.home || ''
+  - spec.active = spec.active || ''
   - spec.__class = spec.__class || ''
 
 
-  header.row.main-navigation(class="#{spec.position}")
-    .container
-      
-      .logo
-        a(href=baseUrl) Doug Monieson
+  if spec.home 
 
-      nav.desktop-nav
-        ul
-          li
-            a(href=baseUrl + "trading-experience/") Trading Experience
-          li
-            a(href=baseUrl + "hyde-park-angels/") Hyde Park Angels
-          li
-            a(href=baseUrl + "board-experience") Board Experience
-          li
-            a(href=baseUrl + "alternative-finance") Alternative Finance
-          li
-            a(href=baseUrl + "contact/" class="contact-btn") Contact
+    main.home-header
+ 
+      header.row.main-navigation
+        .container
+          
+          div.col-xs-12
 
-      nav.mobile-nav
-        a(href=baseUrl)
-          img(src=baseUrl + "images/header/menu-icon.png")
-      
-      ul.mobile-nav-popup.row
-        a#close-btn X
-        .col-xs-offset-0.col-xs-12.col-sm-offset-2.col-sm-8
-          li
-            a(href=baseUrl) Home
+            .logo
+              a(href=baseUrl) Doug Monieson
 
-          li
-            a(href=baseUrl + "trading-experience/") Trading Experience
+            nav.desktop-nav
+              ul
+                li
+                  a(href=baseUrl + "trading-experience/") Trading Experience
+                li
+                  a(href=baseUrl + "hyde-park-angels/") Hyde Park Angels
+                li
+                  a(href=baseUrl + "board-experience") Board Experience
+                li
+                  a(href=baseUrl + "alternative-finance") Alternative Finance
+                li
+                  a(href=baseUrl + "contact/" class="contact-btn") Contact
 
-          li
-            a(href=baseUrl + "hyde-park-angels/") Hyde Park Angels
+            nav.mobile-nav
+              a(href=baseUrl)
+                img(src=baseUrl + "images/header/menu-icon-white.png" width="30")
+            
+            ul.mobile-nav-popup.row
+              a#close-btn X
+              .col-xs-offset-0.col-xs-12.col-sm-offset-2.col-sm-8
+                li
+                  a(href=baseUrl) Home
 
-          li
-            a(href=baseUrl + "board-experience") Board Experience
+                li
+                  a(href=baseUrl + "trading-experience/") Trading Experience
 
-          li
-            a(href=baseUrl + "alternative-finance") Alternative Finance
+                li
+                  a(href=baseUrl + "hyde-park-angels/") Hyde Park Angels
+
+                li
+                  a(href=baseUrl + "board-experience") Board Experience
+
+                li
+                  a(href=baseUrl + "alternative-finance") Alternative Finance
 
 
-          li
-            a(href=baseUrl + "contact/" class="contact-btn") Contact
+                li
+                  a(href=baseUrl + "contact/" class="contact-btn") Contact
+
+      section.row.cta
+        .container
+          .col-xs-12.col-md-6
+            h2 To respond to industry challenges new voices must be heard
+
+            +button()
+
+            .padding
+
+
+
+  else 
+    header.row.main-navigation.fixed
+      .container
+  
+        div.col-xs-12
+
+          .logo
+            a(href=baseUrl) Doug Monieson
+
+          nav.desktop-nav
+            ul
+              li
+                a(href=baseUrl + "trading-experience/") Trading Experience
+              li
+                a(href=baseUrl + "hyde-park-angels/") Hyde Park Angels
+              li
+                a(href=baseUrl + "board-experience") Board Experience
+              li
+                a(href=baseUrl + "alternative-finance") Alternative Finance
+              li
+                a(href=baseUrl + "contact/" class="contact-btn") Contact
+
+          nav.mobile-nav
+            a(href=baseUrl)
+              img(src=baseUrl + "images/header/menu-icon.png")
+          
+          ul.mobile-nav-popup.row
+            a#close-btn X
+            .col-xs-offset-0.col-xs-12.col-sm-offset-2.col-sm-8
+              li
+                a(href=baseUrl) Home
+
+              li
+                a(href=baseUrl + "trading-experience/") Trading Experience
+
+              li
+                a(href=baseUrl + "hyde-park-angels/") Hyde Park Angels
+
+              li
+                a(href=baseUrl + "board-experience") Board Experience
+
+              li
+                a(href=baseUrl + "alternative-finance") Alternative Finance
+
+
+              li
+                a(href=baseUrl + "contact/" class="contact-btn") Contact

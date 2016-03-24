@@ -1,22 +1,54 @@
 @import 'utilities';
 
 
-// header styles
+// Homepage Header
+main.home-header {
+  min-height: 590px;
+  // background-color: #252737;
+  background-image: url('../images/header/home-hero.jpg');
+  background-size: cover;
+  background-position: center center;
+  font-family: 'PT Sans Caption', 'PT Sans', Arial, sans-serif;
+  font-weight: bold;
+  color: white;
+
+  section.cta {
+    margin-top: 70px;
+  }
+
+  a {
+    color: white;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  h2 {
+    font-size: 40px;
+    line-height: 60px;
+    margin: 0 0 75px 0;
+  }
+
+  .padding {
+    @include padding(50px);
+  }
+
+}
+
+
+// Header Navigation Bar
 header.main-navigation {
   position: relative;
   height: 100px;
   text-transform: uppercase;
 
-  .container {
+  .container, div.col-xs-12 {
     height: 100%;
   }
 
   li {
     list-style: none;
-  }
-
-  a {
-    color: $dark-blue;
   }
 
   .logo {
@@ -27,9 +59,6 @@ header.main-navigation {
     letter-spacing: -2px;
     @include vertical-align();
   
-    a:hover {
-      opacity: 0.7;
-    }
   }
 
   
@@ -43,18 +72,13 @@ header.main-navigation {
     margin-top: 5px;
     @include vertical-align();
 
-    a:hover {
-      color: $light-blue;
-    }
-
     li {
       display: inline;
       padding: 0 17.5px;
     }
 
     a.contact-btn {
-      color: #368ad9;
-      border: 2px solid #368ad9;
+      border: 2px solid white;
       font-size: 16px;
       font-family: 'PT Sans Caption', Arial, sans-serif;
       padding: 17.5px;
@@ -107,6 +131,21 @@ header.fixed {
   @include fixed-pos(auto, 0px, auto, 0px);
   z-index: 100;
   background: white;
+
+  a {
+    color: $dark-blue;
+  }
+
+  .desktop-nav {
+    a.contact-btn {
+      color: $light-blue;
+      border: 2px solid $light-blue;
+    }
+
+    a:hover {
+      color: $light-blue;
+    }
+  }
 }
 
 

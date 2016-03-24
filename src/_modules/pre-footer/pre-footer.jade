@@ -1,0 +1,16 @@
+//- Include Modules
+include ../button/button
+
+
+mixin pre-footer(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+
+  section.pre-footer.row
+    .container
+      .col-xs-12
+        p  I am deeply committted to our exchange and ask you to support<br>an old name, new face to represent you on the CME Board of directors as a B1 representative.
+
+        +button()
+
+        .padding
