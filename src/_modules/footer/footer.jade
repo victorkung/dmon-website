@@ -2,7 +2,7 @@ mixin footer(spec)
   - spec = spec || {}
   - spec.__class = spec.__class || ''
 
-  footer
+  footer.row
     .container
       nav.row
         .col-xs-12.col-sm-10
@@ -23,10 +23,10 @@ mixin footer(spec)
         .col-xs-12.col-sm-2
           ul.social-media-icons
             li
-              a(href=baseUrl + "trading-experience/") 
+              a(href="https://twitter.com/dmonieson") 
                 img(src=baseUrl + "images/footer/twitter-icon.png")
             li
-              a(href=baseUrl + "hyde-park-angels/")
+              a(href="https://www.linkedin.com/in/douglasmonieson")
                 img(src=baseUrl + "images/footer/linkedin-icon.png")
 
 
