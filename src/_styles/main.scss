@@ -11,7 +11,7 @@
 
 // Fonts
 @import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700|PT+Sans+Caption:400,700|PT+Sans+Narrow:400,700); /* PT Sans */
-@import url(https://fonts.googleapis.com/css?family=Merriweather:400,700,700italic|Montserrat:700); /* Merriweather & Montserra */
+@import url(https://fonts.googleapis.com/css?family=Merriweather:300,400,700,700italic|Montserrat:700); /* Merriweather & Montserra */
 
 // Mignific Popup
 @import '../_styles/magnific-popup';
@@ -30,6 +30,7 @@
 @import '../_modules/footer/footer';
 @import '../_modules/button/button';
 @import '../_modules/press-banner/press-banner';
+@import '../_modules/cme-letter/cme-letter';
 @import '../_modules/pre-footer/pre-footer';
 
 
@@ -84,12 +85,45 @@ h1, h2, h3, h4, h5, h6, p, a {
   // prevents the button hover opacity from effecting other elements
 }
 
+h1, h2, h3, h4 {
+  font-family: 'PT Sans Caption', 'PT Sans', Arial, sans-serif;
+}
+
+h2 {
+  font-size: 40px;
+  line-height: 60px;
+  margin: 0 0 75px 0;
+}
+
+h3 {
+  color: #50525a;
+  font-weight: bold;
+  font-size: 40px;
+  margin: 0 0 40px 0;
+  text-transform: uppercase;
+}
+
 // h1 { font-size: 2.7em; line-height: 1.1em; }
 // h2 { font-size: 2.4em; line-height: 1.2em; }
 // h3 { font-size: 2em; line-height: 1.3em; }
 // h4 { font-size: 1.6666666667em; }
 // h5 { font-size: 1.2em; }
 
+
+p, figcaption {
+  line-height: 24px;
+  margin: 20px 0;
+}
+
+p {
+  font-weight: 300;
+}
+
+figcaption {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
 
 a, button  {
   @include transition(all 0.5s ease);
@@ -102,5 +136,3 @@ a {
     cursor: pointer;
   }
 }
-
-

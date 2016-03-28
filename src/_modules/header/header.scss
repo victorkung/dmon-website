@@ -8,7 +8,6 @@ main.home-header {
   background-image: url('../images/header/home-hero.jpg');
   background-size: cover;
   background-position: center center;
-  font-family: 'PT Sans Caption', 'PT Sans', Arial, sans-serif;
   font-weight: bold;
   color: white;
 
@@ -22,12 +21,6 @@ main.home-header {
     &:hover {
       opacity: 0.7;
     }
-  }
-
-  h2 {
-    font-size: 40px;
-    line-height: 60px;
-    margin: 0 0 75px 0;
   }
 
   .padding {
