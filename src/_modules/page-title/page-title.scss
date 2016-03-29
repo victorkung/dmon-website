@@ -9,7 +9,7 @@
   }
 
   .lead {
-    padding: 50px 50px;
+    padding: 50px 0px 50px 15px;
     max-width: 100%;
   }
 
@@ -31,9 +31,21 @@
     height: 260px;
     
     .lead {
-      padding: 0 50px;
       @include vertical-align();
     }
   
+  }
+}
+
+
+// Specific Styling for Page Title of
+// the HPA page
+.hpa-page .page-title .lead {
+  padding: 50px 50px;
+}
+
+@media screen and (min-width: 768px) {
+  .hpa-page .page-title .lead {
+    padding: 0 50px;
   }
 }

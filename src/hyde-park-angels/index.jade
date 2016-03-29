@@ -8,43 +8,58 @@ block config
 include ../_modules/header/header
 include ../_modules/page-title/page-title
 include ../_modules/testimonial/testimonial
+include ../_modules/quote/quote
 include ../_modules/pre-footer/pre-footer
 include ../_modules/footer/footer
 
 block content
-  +header()
-  .body-padding
-  +page-title({
-    title: 'Hyde Park Angels',
-    subtitle: 'Hyde Park Angels is the premier midwest early stage investor group that connects entrepreneurs and members through financial and human capital to foster successful outcomes for members, companies and communities ',
-    bg_img: 'images/header/home-hero.jpg',
-    max_width: 850,
-    margin: 'auto'
-  })
+  
+  .hpa-page
 
-  .row.single-col-text
-    p.
-      Doug Monieson is Chairman of the board of Hyde Park Angels, the largest and most active member driven angel group in the Midwest. With a membership of over 100 successful entrepreneurs, executives, and venture capitalists, the organization prides itself on providing critical strategic expertise to entrepreneurs and the entrepreneurial community.
+    +header()
+    .body-padding
+    +page-title({
+      title: 'Hyde Park Angels',
+      subtitle: 'Hyde Park Angels is the premier midwest early stage investor group that connects entrepreneurs and members through financial and human capital to foster successful outcomes for members, companies and communities ',
+      bg_img: 'images/page-title/hpa-banner.jpg',
+      max_width: 850,
+      margin: 'auto'
+    })
 
-    p.
-      By leveraging the members’ deep and broad knowledge of multiple industries and financial capital, Hyde Park Angels has driven multiple exits and invested millions of dollars in over 40 portfolio companies that have created over 850 jobs in the Midwest since 2007. 
+    +quote({
+      quote: "People volunteering together in the spirit of cooperation can accomplish great things",
+      source: "Benjamin Franklin"
+    })
+
+    .row.single-col-text
+      p.
+        Doug Monieson is Chairman of the board of Hyde Park Angels, the largest and most active member driven angel group in the Midwest. With a membership of over 100 successful entrepreneurs, executives, and venture capitalists, the organization prides itself on providing critical strategic expertise to entrepreneurs and the entrepreneurial community.
+
+      p.
+        By leveraging the members’ deep and broad knowledge of multiple industries and financial capital, Hyde Park Angels has driven multiple exits and invested millions of dollars in over 40 portfolio companies that have created over 850 jobs in the Midwest since 2007. 
 
 
-  +testimonial({
-    testimonial: "Doug was an outstanding asset in the process of establishing an angel fund: he is a savvy investor who asks the right questions, gets at tough issues, and sees matters through to resolution.",
-    source: "Donna Zarcone",
-    source2: "President and CEO of Economics Club of Chicago"
-  })
+    +testimonial({
+      testimonial: "Doug was an outstanding asset in the process of establishing an angel fund: he is a savvy investor who asks the right questions, gets at tough issues, and sees matters through to resolution.",
+      source: "Donna Zarcone",
+      source2: "President and CEO of Economics Club of Chicago"
+    })
 
-  .row.single-col-text
-    img(src=baseUrl + "images/hpa-social.jpg" alt="Hyde Park Angels Social Event")
-    p.
-      The first deal Mr Monieson led at HPA in 2008 was an investment in Gradebeam,  a pioneer of Software as a Service in the construction industry. Investing in a construction company during the greatest recession in our lifetime was challenging and rewarding. The investment thesis was  that our customers, America’s largest General Contractors, would embrace technology during an economic slowdown to drive down costs and improve efficiencies. Led by an outstanding CEO and a board of industry insiders, we doubled revenues and were acquired in 2011 by Textura Corporation (TXTR) for a 4x return.
+    .row.single-col-text
+      img(src=baseUrl + "images/hpa-social.jpg" alt="Hyde Park Angels Social Event")
+      p.
+        The first deal Mr Monieson led at HPA in 2008 was an investment in Gradebeam,  a pioneer of Software as a Service in the construction industry. Investing in a construction company during the greatest recession in our lifetime was challenging and rewarding. The investment thesis was  that our customers, America’s largest General Contractors, would embrace technology during an economic slowdown to drive down costs and improve efficiencies. Led by an outstanding CEO and a board of industry insiders, we doubled revenues and were acquired in 2011 by Textura Corporation (TXTR) for a 4x return.
 
-  +testimonial({
-    testimonial: "Through Doug's leadership with the investment of Hyde Park Angels, GradeBeam.com was able to significantly increase revenue and market share which resulted in a successful exit for the investors.",
-    source: "Bryan Jurewitz",
-    source2: "CEO of Gradebeam, Now COO of ThreadMeUp"
-  })
-  +pre-footer()
-  +footer()
+    +testimonial({
+      testimonial: "Through Doug's leadership with the investment of Hyde Park Angels, GradeBeam.com was able to significantly increase revenue and market share which resulted in a successful exit for the investors.",
+      source: "Bryan Jurewitz",
+      source2: "CEO of Gradebeam, Now COO of ThreadMeUp"
+    })
+
+    .row.single-col-text
+      h4.text-center Learn more about Hyde Park Angels
+      p.
+        Links
+
+    +pre-footer()
+    +footer()

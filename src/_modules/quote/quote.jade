@@ -1,0 +1,12 @@
+mixin quote(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+  - spec.quote = spec.quote || ''
+  - spec.source = spec.source || ''
+
+  .quote
+    .row
+      .container
+        .col-xs-offset-2.col-xs-8
+          blockquote!= spec.quote
+          cite!= spec.source

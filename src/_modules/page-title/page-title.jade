@@ -8,7 +8,7 @@ mixin page-title(spec)
   - spec.margin = spec.margin || 'initial'
 
   .page-title
-    .row(style="background: url(" + baseUrl + "#{spec.bg_img}) no-repeat center center; ")
+    .row(style="background: url(" + baseUrl + "#{spec.bg_img}) no-repeat center center; background-size: cover;")
       .container
         .lead(style="width: " + "#{spec.max_width}" + "px; margin: " + "#{spec.margin}" + ";")
           h1!= spec.title

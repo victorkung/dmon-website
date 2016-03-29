@@ -12,19 +12,58 @@ include ../_modules/pre-footer/pre-footer
 include ../_modules/footer/footer
 
 block content
-  +header()
-  .body-padding
-  +page-title({
-    title: 'Alternative Finance',
-    subtitle: 'Placeholder text for a subheading that will give a high level summary of Doug’s alternative finance experience',
-    bg_img: 'images/header/home-hero.jpg',
-    max_width: 765
-  })
-  +testimonial({
-    testimonial: "I want Doug involved in everything I do, and I could not recommend him more highly.",
-    source: "Ira Weiss",
-    source2: "Hyde Park Venture Partners",
-    source3: "Clinical professor of entrepreneurship, university of chicago"
-  })
-  +pre-footer()
-  +footer()
+
+  .alternative-finance-page
+
+    +header()
+    .body-padding
+    +page-title({
+      title: 'Alternative Finance',
+      subtitle: 'Placeholder text for a subheading that will give a high level summary of Doug’s alternative finance experience',
+      bg_img: 'images/page-title/alternative-finance-banner.jpg',
+      max_width: 765
+    })
+
+    .text-block
+      .row
+        .container
+          .col-xs-12.col-sm-offset-1.col-sm-5
+            p.
+              The Alternative Finance Institute at The University of Chicago, in partnership with Center for Alternative Finance at Cambridge University is conducting the first worldwide study on the growth of Alternative Finance.
+
+            p.
+              Today, finance platforms like crowdfunding and peer-to-peer lending that are using cutting edge technology are changing the way people and institutions access money.  
+
+
+          .col-xs-12.col-sm-5
+            p.highlight.
+              Article: Cambridge Centre for Alternative Finance Receives $1 Million Grant from CME Group Foundation
+
+            img(src=baseUrl + "images/cambridge-university.jpg" alt="Cambridge University" width="330")
+
+
+      .row
+        .container
+          .col-xs-12.col-sm-offset-1.col-sm-10
+            p.
+              Mr.Monieson, an Associate Director of the Alternative Finance Institute at University of Chicago Booth Business School, played a lead role in establishing the CME as a leading sponsor of the first-ever study.
+
+    +testimonial({
+      testimonial: "I want Doug involved in everything I do, and I could not recommend him more highly.",
+      source: "Ira Weiss",
+      source2: "Hyde Park Venture Partners",
+      source3: "Clinical professor of entrepreneurship, university of chicago"
+    })
+
+
+    .text-block
+      .row
+        .container
+          .col-xs-12.col-sm-offset-1.col-sm-10
+            h4 The Studies
+            p.
+              Put links here 
+
+
+    +pre-footer()
+    +footer()
