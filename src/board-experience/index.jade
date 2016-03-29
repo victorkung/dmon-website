@@ -1,0 +1,23 @@
+extends ../_layouts/base
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../'
+
+//- Include Modules
+include ../_modules/header/header
+include ../_modules/page-title/page-title
+include ../_modules/footer/footer
+include ../_modules/pre-footer/pre-footer
+
+block content
+  +header()
+  .body-padding
+  +page-title({
+    title: 'Board Experience',
+    subtitle: 'Placeholder text for a subheading that will give a high level summary of Doug’s board experience',
+    bg_img: 'images/header/home-hero.jpg',
+    max_width: 700
+  })
+  +pre-footer()
+  +footer()

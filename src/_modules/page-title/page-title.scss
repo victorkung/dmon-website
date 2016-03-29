@@ -1,0 +1,39 @@
+// page-title styles
+
+.page-title {
+  height: auto;
+  color: white;
+
+  .row {
+    height: 100%;
+  }
+
+  .lead {
+    padding: 50px 50px;
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 60px;
+    text-transform: uppercase;
+    margin: 0 0 10px 0;
+  }
+
+  p {
+    margin: 0;
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .page-title {
+    height: 260px;
+    
+    .lead {
+      padding: 0 50px;
+      @include vertical-align();
+    }
+  
+  }
+}

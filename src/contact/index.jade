@@ -1,0 +1,22 @@
+extends ../_layouts/base
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../'
+
+//- Include Modules
+include ../_modules/header/header
+include ../_modules/page-title/page-title
+include ../_modules/footer/footer
+include ../_modules/pre-footer/pre-footer
+
+block content
+  +header()
+  .body-padding
+  +page-title({
+    title: 'Contact',
+    subtitle: '',
+    bg_img: 'images/header/home-hero.jpg'
+  })
+  +pre-footer()
+  +footer()

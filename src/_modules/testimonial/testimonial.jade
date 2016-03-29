@@ -1,0 +1,17 @@
+mixin testimonial(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+  - spec.testimonial = spec.testimonial
+  - spec.source = spec.source || ''
+  - spec.source2 = spec.source2 || ''
+  - spec.source3 = spec.source3 || ''
+
+  .testimonial
+    .row
+      .container
+        .col-xs-offset-2.col-xs-8.col-sm-offset-3.col-sm-6
+          blockquote!= spec.testimonial
+          cite!= spec.source
+          cite!= spec.source2          
+          if spec.source3
+            cite!= spec.source3

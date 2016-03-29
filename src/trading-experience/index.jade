@@ -1,0 +1,29 @@
+extends ../_layouts/base
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../'
+
+//- Include Modules
+include ../_modules/header/header
+include ../_modules/page-title/page-title
+include ../_modules/testimonial/testimonial
+include ../_modules/pre-footer/pre-footer
+include ../_modules/footer/footer
+
+block content
+  +header()
+  .body-padding
+  +page-title({
+    title: 'Trading Experience',
+    subtitle: 'Doug Monieson, a second generation CME member, is an active electronic futures trader with thirty years of experience. ',
+    bg_img: 'images/header/home-hero.jpg',
+    max_width: 740
+  })
+  +testimonial({
+    testimonial: "I consider him a trusted mentor and close friend. In my current role, he has been a great outlet and always has an intelligent, yet very logical perspective on today’s current market issues and events.",
+    source: "Dan Gunsberg",
+    source2: "COO, DV Trading"
+  })
+  +pre-footer()
+  +footer()

@@ -27,6 +27,8 @@
 
 // *** IMPORTING MODULES ***
 @import '../_modules/header/header';
+@import '../_modules/page-title/page-title';
+@import '../_modules/testimonial/testimonial';
 @import '../_modules/footer/footer';
 @import '../_modules/button/button';
 @import '../_modules/press-banner/press-banner';
@@ -52,6 +54,13 @@ html, body {
   margin: auto;
 }
 
+.container {
+  height: 100%;
+}
+
+.body-padding {
+  padding-top: 100px;
+}
 
 // *** TYPOGRAPHY STYLES ***
 
@@ -134,5 +143,21 @@ a {
   &:hover {
     text-decoration: none;
     cursor: pointer;
+  }
+}
+
+// Hyde Park Angels page
+.single-col-text {
+  max-width: 850px;
+  padding: 50px 50px 35px 50px;
+  margin: auto;
+
+  p {
+    margin-bottom: 35px;
+  }
+
+  img {
+    margin: 25px 0 30px;
+    max-width: 100%;
   }
 }

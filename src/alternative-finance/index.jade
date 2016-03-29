@@ -1,0 +1,30 @@
+extends ../_layouts/base
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../'
+
+//- Include Modules
+include ../_modules/header/header
+include ../_modules/page-title/page-title
+include ../_modules/testimonial/testimonial
+include ../_modules/pre-footer/pre-footer
+include ../_modules/footer/footer
+
+block content
+  +header()
+  .body-padding
+  +page-title({
+    title: 'Alternative Finance',
+    subtitle: 'Placeholder text for a subheading that will give a high level summary of Doug’s alternative finance experience',
+    bg_img: 'images/header/home-hero.jpg',
+    max_width: 765
+  })
+  +testimonial({
+    testimonial: "I want Doug involved in everything I do, and I could not recommend him more highly.",
+    source: "Ira Weiss",
+    source2: "Hyde Park Venture Partners",
+    source3: "Clinical professor of entrepreneurship, university of chicago"
+  })
+  +pre-footer()
+  +footer()

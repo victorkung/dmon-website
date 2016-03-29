@@ -1,0 +1,15 @@
+mixin page-title(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+  - spec.title = spec.title
+  - spec.subtitle = spec.subtitle
+  - spec.bg_img = spec.bg_img
+  - spec.max_width = spec.max_width
+  - spec.margin = spec.margin || 'initial'
+
+  .page-title
+    .row(style="background: url(" + baseUrl + "#{spec.bg_img}) no-repeat center center; ")
+      .container
+        .lead(style="width: " + "#{spec.max_width}" + "px; margin: " + "#{spec.margin}" + ";")
+          h1!= spec.title
+          p!= spec.subtitle
