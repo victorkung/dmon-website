@@ -65,9 +65,13 @@ header.main-navigation {
     margin-top: 5px;
     @include vertical-align();
 
+    ul {
+      padding-left: 0;
+    }
+
     li {
       display: inline;
-      padding: 0 17.5px;
+      padding: 0 7.5px;
     }
 
     a.contact-btn {
@@ -150,6 +154,16 @@ header.fixed {
     }
     .mobile-nav {
       display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  header.main-navigation {
+    .desktop-nav {
+      li {
+        padding: 0 17.5px;
+      }
     }
   }
 }

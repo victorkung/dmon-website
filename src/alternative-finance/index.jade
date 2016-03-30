@@ -21,10 +21,11 @@ block content
       title: 'Alternative Finance',
       subtitle: 'Placeholder text for a subheading that will give a high level summary of Doug’s alternative finance experience',
       bg_img: 'images/page-title/alternative-finance-banner.jpg',
-      max_width: 765
+      max_width: 765,
+      margin: 'auto'
     })
 
-    .text-block
+    .two-col-text
       .row
         .container
           .col-xs-12.col-sm-offset-1.col-sm-5
@@ -39,7 +40,7 @@ block content
             p.highlight.
               Article: Cambridge Centre for Alternative Finance Receives $1 Million Grant from CME Group Foundation
 
-            img(src=baseUrl + "images/cambridge-university.jpg" alt="Cambridge University" width="330")
+            img(src=baseUrl + "images/cambridge-university.jpg" alt="Cambridge University" width="375")
 
 
       .row
@@ -56,13 +57,26 @@ block content
     })
 
 
-    .text-block
+    .two-col-text
       .row
         .container
           .col-xs-12.col-sm-offset-1.col-sm-10
             h4 The Studies
-            p.
-              Put links here 
+
+      .row
+        .container
+          .col-xs-12.col-sm-offset-1.col-sm-5
+            p
+              a.blue(href="https://drive.google.com/file/d/0B0Y4GDBgkFHTc1EtejhKTkMzU2M/view" target="_blank") Download the UK Study
+            
+            a(href="https://drive.google.com/file/d/0B0Y4GDBgkFHTc1EtejhKTkMzU2M/view" target="_blank")
+              img(src=baseUrl+"images/alt-finance-uk.jpg" alt="Alternative Finance UK Study" class="alt-finance-studies")
+
+          .col-xs-12.col-sm-5
+            p
+              a.blue(href="" target="_blank") Download the APAC Study
+            a(href="" target="_blank")
+              img(src=baseUrl+"images/alt-finance-apac.jpg" alt="Alternative Finance APC Study" class="alt-finance-studies")
 
 
     +pre-footer()

@@ -1,0 +1,50 @@
+mixin experience-panel(spec)
+  - spec = spec || {}
+  - spec.__class = spec.__class || ''
+  - spec.logo = spec.logo || 'Logo here'
+  - spec.logo_alt = spec.logo_alt || ''
+  - spec.logo_width = spec.logo_width || ''
+  - spec.timeline = spec.timeline || 'Timeline'
+  - spec.description = spec.description || 'Enter description here'
+  - spec.bullet1 = spec.bullet1 || ''
+  - spec.bullet2 = spec.bullet2 || ''
+  - spec.bullet3 = spec.bullet3 || ''
+  - spec.bullet4 = spec.bullet4 || ''
+  - spec.bullet5 = spec.bullet5 || ''
+  - spec.bullet6 = spec.bullet6 || ''
+  - spec.bullet7 = spec.bullet7 || ''
+  - spec.bullet8 = spec.bullet8 || ''
+
+
+  .experience-panel
+    
+    .row.panel-heading
+      .container
+        .col-xs-12.col-sm-offset-1.col-sm-10
+          img(src=baseUrl+"#{spec.logo}" alt="#{spec.logo_alt}" width="#{spec.logo_width}").logo
+        
+          time!=spec.timeline
+    
+    .row.panel-body
+      .container
+        .col-xs-12.col-sm-offset-1.col-sm-10
+          p!= spec.description
+
+          ul
+            if spec.bullet1
+              li!= spec.bullet1
+            if spec.bullet2
+              li!= spec.bullet2
+            if spec.bullet3
+              li!= spec.bullet3
+            if spec.bullet4
+              li!= spec.bullet4
+            if spec.bullet5
+              li!= spec.bullet5
+            if spec.bullet6
+              li!= spec.bullet6
+            if spec.bullet7
+              li!= spec.bullet7
+            if spec.bullet8
+              li!= spec.bullet8
+

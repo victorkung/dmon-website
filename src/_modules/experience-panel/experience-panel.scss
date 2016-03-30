@@ -1,0 +1,48 @@
+// experience-panel styles
+.experience-panel {
+
+  .panel-heading {
+    padding-top: 75px;
+  }
+
+  .panel-body {
+    .col-xs-12 {
+      padding-bottom: 60px;
+      border-bottom: 1px solid #ebebeb;
+    }
+  }
+
+  time {
+    display: block;
+    margin-top: 25px;
+  }
+
+  p {
+    margin-bottom: 35px;
+  }
+
+  ul { 
+    padding-left: 20px;
+    
+    li {
+      font-weight: 300;
+      margin-bottom: 25px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+}
+
+@media screen and (min-width: 600px) {
+  .experience-panel {
+    time {
+      margin-top: initial;
+      position: absolute;
+      right: 75px;
+      bottom: 10px;
+    }
+  }
+}

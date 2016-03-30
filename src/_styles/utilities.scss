@@ -11,7 +11,7 @@ $dark-blue: #0a1e32;
 $light-blue: #368ad9;
 $turquoise: #00add1;
 $black: #50525a;
-
+$blue: #3085d7;
 
 // Mixins 
 @mixin vertical-align($position: relative, $translateY: -50%) {
@@ -75,5 +75,4 @@ $black: #50525a;
 .text-right { text-align: right; }
 .text-center {text-align: center; }
 .border-underline { border-bottom: 1px solid white;  }
-
-
+.blue { color: $blue; }

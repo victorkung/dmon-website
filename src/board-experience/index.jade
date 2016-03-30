@@ -9,6 +9,7 @@ include ../_modules/header/header
 include ../_modules/page-title/page-title
 include ../_modules/footer/footer
 include ../_modules/pre-footer/pre-footer
+include ../_modules/experience-panel/experience-panel
 
 block content
   +header()
@@ -17,7 +18,69 @@ block content
     title: 'Board Experience',
     subtitle: 'Placeholder text for a subheading that will give a high level summary of Doug’s board experience',
     bg_img: 'images/page-title/board-experience-banner.jpg',
-    max_width: 700
+    max_width: 700,
+    margin: 'auto'
   })
+
+  +experience-panel({
+    logo: 'images/experience-panel/hpa-logo.png',
+    logo_alt: 'Hyde Park Angels Logo',
+    logo_width: '325',
+    timeline: '2008 - present',
+    description: 'HPA is the premier Midwest early stage investor group that connects entrepreneurs and members through financial and human capital to foster successful outcomes for members, companies and communities.',
+    bullet1: 'Chairman of the Board 2012-2016',
+    bullet2: 'Hired new Managing Director, 2014',
+    bullet3: 'Launched Hyde Park Venture Partners fund, 2011',
+    bullet4: 'Partnered University of Chicago and Hyde Park Angels',
+    bullet5: 'Installed succession plan for board members and leadership committees',
+    bullet6: 'Initiated board of directors survey to evaluate board performance',
+    bullet7: 'Revised bylaws',
+    bullet8: 'Established first Director and Officer Insurance Policy US angel group'
+  })
+
+  +experience-panel({
+    logo: 'images/experience-panel/gradebeam-logo.png',
+    logo_alt: 'GradeBeam Logo',
+    logo_width: '220',
+    timeline: '2008 - 2011 (3 years)',
+    description: 'Led outside round of investments for HPA’s initial investment in Gradebeam, a cloud-based project management suite for construction industry. Led successful acquisition by Textura Corporation. HPA investors got a 4x return on investment.',
+    bullet1: 'Created board of directors',
+    bullet2: 'Recruited independent director',
+    bullet3: 'Re-engaged original investors',
+    bullet4: 'Restructured CEO compensation'
+  })
+
+  +experience-panel({
+    logo: 'images/experience-panel/duratouch-logo.png',
+    logo_alt: 'duraTouch Logo',
+    logo_width: '225',
+    timeline: '2012 - present',
+    description: 'UICO are experts in touch technology with three rounds of financing. Hyde Park Angels invested first-round 2008. Company’s annual revenue has doubled last 3 years..',
+    bullet1: 'Assigned independent mentor for CEO',
+    bullet2: 'Installed productive tech team in San Francisco'
+  })
+
+  +experience-panel({
+    logo: 'images/experience-panel/hpvp-logo.png',
+    logo_alt: 'Hyde Park Venture Partners Logo',
+    logo_width: '220',
+    timeline: '2012 - present',
+    description: 'Limited Partners Advisory Committee for $25M early stage venture capital fund focused on software startups in the Midwest.',
+    bullet1: 'Established valuation criteria for the fund',
+    bullet2: 'Addressed potential conflicts of interest between the General Partners and Limited Partners',
+    bullet3: 'Cooperated with HPVP to manage conflicts arising from investment overlap between initial fund and launch of second fund'
+  })
+
+  +experience-panel({
+    logo: 'images/experience-panel/rails-to-trails-logo.png',
+    logo_alt: 'Rails to Trails Logo',
+    logo_width: '135',
+    timeline: '2015 - present',
+    description: 'RTC is an $8M/year charity creating a nationwide network of trails from former rail lines to build healthier places for healthier people.',
+    bullet1: 'Created metrics for managing Projects of National Significance',
+    bullet2: 'Restructured marketing committee to promote mission of the organization',
+    bullet3: 'Introduced large bike manufacturer with goal to form partnership and sponsorship'
+  })
+
   +pre-footer()
   +footer()

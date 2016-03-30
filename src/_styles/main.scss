@@ -35,6 +35,7 @@
 @import '../_modules/press-banner/press-banner';
 @import '../_modules/cme-letter/cme-letter';
 @import '../_modules/pre-footer/pre-footer';
+@import '../_modules/experience-panel/experience-panel';
 
 
 
@@ -119,7 +120,7 @@ h3 {
 
 h4 {
   font-size: 30px;
-  margin: 10px 0 50px 0;
+  margin: 10px 0 30px 0;
 }
 
 // h1 { font-size: 2.7em; line-height: 1.1em; }
@@ -162,7 +163,7 @@ img {
 
 
 // Trading Experience
-.text-block {
+.two-col-text {
   margin: 50px 0 50px;
 
   p {
@@ -181,7 +182,7 @@ img {
 }
 
 @media screen and (min-width: 768px) {
-  .text-block {
+  .two-col-text {
     margin: 75px 0 75px;
   }
 }
@@ -213,12 +214,14 @@ img {
 // Alternative Finance
 .alternative-finance-page {
   p.highlight {
-    color: #3085d7;
-    width: 75%;
+    color: $blue;
     line-height: 24px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+  }
+  img.alt-finance-studies {
+    max-height: 575px;
   }
 }
 
@@ -229,7 +232,7 @@ img {
       margin-left: initial;
       margin-right: initial;
     }
-    .text-block img {
+    .two-col-text img {
       margin-left: initial;
       margin-right: initial;
       margin-bottom: 25px;
