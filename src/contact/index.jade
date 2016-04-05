@@ -13,10 +13,37 @@ include ../_modules/pre-footer/pre-footer
 block content
   +header()
   .body-padding
-  +page-title({
-    title: 'Contact',
-    subtitle: '',
-    bg_img: 'images/header/home-hero.jpg'
-  })
+    +page-title({
+      title: 'Contact',
+      bg_img: 'images/page-title/contact-banner.jpg',
+      max_width: 850,
+      margin: 'auto'
+    })
+
+    .row.single-col-text
+      h4.pt-narrow Doug Monieson
+      p Click below to book an appointment with Doug
+      
+      +button({
+        text: 'BOOK',
+        link: 'https://douglasmonieson.youcanbook.me/'
+      })
+
+      p(style="margin-top: 45px;") Email<br>
+        a(href="mailto:doug.monieson@gmail.com") doug.monieson@gmail.com
+
+      p Contact number<br><tel>312-604-6175</tel>
+
+      p LinkedIn<br>
+        a(href="https://www.linkedin.com/in/douglasmonieson" target="_blank") https://www.linkedin.com/in/douglasmonieson
+
+
+    .row.single-col-text
+      h4.pt-narrow For Additional Assistance, Please Contact Sheila Schuringa
+
+      p Contact number<br><tel>312-604-6152</tel>
+
+
+
   +pre-footer()
   +footer()

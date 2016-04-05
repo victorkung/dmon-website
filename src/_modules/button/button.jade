@@ -1,6 +1,7 @@
 mixin button(spec)
   - spec = spec || {}
   - spec.__class = spec.__class || ''
+  - spec.text = spec.text || 'VOTE NOW'
+  - spec.link = spec.link || 'http://www.proxyvote.com'
 
-  a.button(href="http://www.proxyvote.com/" target="_blank").
-    VOTE NOW
+  a.button(href="#{spec.link}" target="_blank")!= spec.text
