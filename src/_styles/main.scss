@@ -107,7 +107,7 @@ h2 {
   margin: 0 0 75px 0;
 }
 
-h3, h4 {
+h3, h4, h5 {
   color: #50525a;
   font-weight: bold;
   text-transform: uppercase;
@@ -118,9 +118,13 @@ h3 {
   margin: 0 0 40px 0;
 }
 
-h4 {
+h4, h5 {
   font-size: 30px;
   margin: 10px 0 30px 0;
+}
+
+h5 {
+  font-family: 'PT Sans Narrow', 'PT Sans Caption', Arial, sans-serif;
 }
 
 // h1 { font-size: 2.7em; line-height: 1.1em; }
@@ -195,9 +199,7 @@ img {
     margin-top: 50px;
   }
 }
-.pt-narrow {
-  font-family: 'PT Sans Narrow', 'PT Sans Caption', Arial, sans-serif;
-}
+
 .single-col-text {
   max-width: 850px;
   padding: 50px 50px 35px 50px;
