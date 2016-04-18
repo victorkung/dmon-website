@@ -5,7 +5,7 @@
 main.home-header {
   min-height: 590px;
   // background-color: #252737;
-  background-image: url('../images/header/home-hero.jpg');
+  background-image: url('../images/header/home-hero-mobile.jpg');
   background-size: cover;
   background-position: center center;
   font-weight: bold;
@@ -48,7 +48,7 @@ header.main-navigation {
     float: left;
     font-family: 'Montserrat', 'PT Sans', Arial, sans-serif;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 1.875em; /* 30px */
     letter-spacing: -2px;
     @include vertical-align();
   
@@ -76,7 +76,7 @@ header.main-navigation {
 
     a.contact-btn {
       border: 2px solid white;
-      font-size: 16px;
+      font-size: 1em; /* 16px */
       font-family: 'PT Sans Caption', Arial, sans-serif;
       padding: 17.5px;
       border-radius: 10px;
@@ -106,7 +106,7 @@ header.main-navigation {
       position: fixed;
       @include fixed-pos(25px, 25px, auto, auto);
       color: white;
-      font-size: 36px;
+      font-size: 2.25em; /* 36px */
     }
 
     li {
@@ -114,7 +114,7 @@ header.main-navigation {
       
       a {
         color: white;
-        font-size: 28px;
+        font-size: 1.5em; /* 24px */
       }
     }
 
@@ -145,6 +145,12 @@ header.fixed {
   }
 }
 
+
+@media screen and (min-width: 768px) {
+  main.home-header {
+    background-image: url('../images/header/home-hero.jpg');  
+  }
+}
 
 // Make sure that the Desktop header shows up in Desktop view and the mobile header does not
 @media screen and (min-width: 992px) {

@@ -68,28 +68,17 @@ html, body {
 // *** TYPOGRAPHY STYLES ***
 
 body {
-  font-size: 16px;
-  // Therefore 1 em = 16pxt
+  font-size: 14px;
+  // Therefore 1 em = 16px
 }
 
 
-// @media screen and (min-width: 768px) {
-//   body {
-//     font-size: 18px;
-//   }
-// }
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+}
 
-// @media screen and (min-width: 992px) {
-//   body {
-//     font-size: 16px;
-//   }
-// }
-
-// @media screen and (min-width: 1200px) {
-//   body {
-//     font-size: 20px;
-//   }
-// }
 
 
 h1, h2, h3, h4, h5, h6, p, a {
@@ -101,8 +90,18 @@ h1, h2, h3, h4 {
   font-family: 'PT Sans Caption', 'PT Sans', Arial, sans-serif;
 }
 
+h1 {
+  font-size: 3em; /* 48px */
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 3.75em; /* 60px */
+  }
+}
+
 h2 {
-  font-size: 40px;
+  font-size:  2.22em; /* 40px */
   line-height: 60px;
   margin: 0 0 75px 0;
 }
@@ -114,12 +113,12 @@ h3, h4, h5 {
 }
 
 h3 {
-  font-size: 40px;
+  font-size: 2.22em; /* 40px */
   margin: 0 0 40px 0;
 }
 
 h4, h5 {
-  font-size: 30px;
+  font-size: 1.875em; /* 30px */
   margin: 10px 0 30px 0;
 }
 
