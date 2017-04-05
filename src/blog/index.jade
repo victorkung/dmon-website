@@ -1,0 +1,53 @@
+extends ../_layouts/base
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../'
+
+//- Include Modules
+include ../_modules/header/header
+include ../_modules/page-title/page-title
+include ../_modules/testimonial/testimonial
+include ../_modules/pre-footer/pre-footer
+include ../_modules/footer/footer
+
+block content
+
+  .alternative-finance-page
+
+    +header()
+    .body-padding
+    +page-title({
+      title: 'Blog',
+      subtitle: 'My thoughts on important issues facing our industry today.',
+      bg_img: 'images/page-title/alternative-finance-banner.jpg',
+      max_width: 850
+    })
+
+    .single-col-text
+      .row
+        .container
+          .col-xs-12
+            img(src=baseUrl + "images/fia-boca-logo.png" alt="FIA Boca" style="max-width: 500px")
+
+            h4 
+              a(href="https://medium.com/@dmonieson/takeaways-from-fia-boca-ebc0fb44b3ce" style="color: #00add1;" target="_blank") Takeaways from FIA Boca
+              
+            p.
+              Thoughts and observations for FIA Boca, the futures industry conference that gathered over 1,100 delegates from over 25 countries for a look at both current conditions and future prospects for the business.
+
+      .row
+        .container
+          .col-xs-12
+            img(src=baseUrl + "images/default-in-a-day-logo.png" alt="Default In a Day" style="max-width: 500px")
+
+            h4
+              a(href="https://medium.com/@dmonieson/fia-default-in-a-day-36b18b7f19c4" style="color: #00add1;" target="_blank") FIA Default In A Day
+              
+            p.
+              “Default in a Day” brought together regulators, exchange officials, FCMs, academics and customers to look at past examples and current conditions to examine how a major default of a customer or institution would be handled.  
+
+
+
+    +pre-footer()
+    +footer()

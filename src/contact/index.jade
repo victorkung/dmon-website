@@ -16,32 +16,36 @@ block content
     +page-title({
       title: 'Contact',
       bg_img: 'images/page-title/contact-banner.jpg',
-      max_width: 850,
-      margin: 'auto'
+      max_width: 850
     })
 
     .row.single-col-text
-      h5 Doug Monieson
-      p Click below to book an appointment with Doug
-      
-      +button({
-        text: 'BOOK',
-        link: 'https://douglasmonieson.youcanbook.me/'
-      })
+      .container
+        .col-xs-12
 
-      p(style="margin-top: 45px;") Email<br>
-        a(href="mailto:doug.monieson@gmail.com") doug.monieson@gmail.com
+          h5 Doug Monieson
+          p Click below to book an appointment with Doug
+          
+          +button({
+            text: 'BOOK',
+            link: 'https://douglasmonieson.youcanbook.me/'
+          })
 
-      p Contact number<br><tel>312-604-6175</tel>
+          p(style="margin-top: 45px;") Email<br>
+            a(href="mailto:doug.monieson@gmail.com") doug.monieson@gmail.com
 
-      p LinkedIn<br>
-        a(href="https://www.linkedin.com/in/douglasmonieson" target="_blank") https://www.linkedin.com/in/douglasmonieson
+          p Contact number<br><tel>312-604-6175</tel>
+
+          p LinkedIn<br>
+            a(href="https://www.linkedin.com/in/douglasmonieson" target="_blank") https://www.linkedin.com/in/douglasmonieson
 
 
     .row.single-col-text
-      h5 For Additional Assistance, Please Contact Sheila Schuringa
+      .container
+        .col-xs-12      
+          h5 For Additional Assistance, Please Contact Sheila Schuringa
 
-      p Contact number<br><tel>312-604-6152</tel>
+          p Contact number<br><tel>312-604-6152</tel>
 
 
 

@@ -20,14 +20,14 @@ mixin experience-panel(spec)
     
     .row.panel-heading
       .container
-        .col-xs-12.col-sm-offset-1.col-sm-10
+        .col-xs-12
           img(src=baseUrl+"#{spec.logo}" alt="#{spec.logo_alt}" width="#{spec.logo_width}").logo
         
           time!=spec.timeline
     
     .row.panel-body
       .container
-        .col-xs-12.col-sm-offset-1.col-sm-10
+        .col-xs-12
           p!= spec.description
 
           ul

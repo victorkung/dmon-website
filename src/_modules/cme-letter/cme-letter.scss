@@ -2,11 +2,22 @@
 
 
 .cme-letter {
-  margin-top: 150px;
+  margin-top: 50px;
   margin-bottom: 125px;
 
   p {
     margin-bottom: 35px;
+  }
+
+  li {
+    font-weight: 100;
+    margin-bottom: 15px;
+  }
+
+  ul {
+    padding-left: 17.5px;
+    padding-right: 25px;
+    margin-left: 0;
   }
 
   img {
